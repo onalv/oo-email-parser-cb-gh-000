@@ -10,7 +10,7 @@ class EmailParser
   end
 
   def parse
-    @list_emails = emails.split(/[,]/).strip
+    @list_emails = emails.split(/[,]/).collect{|email| email.strip}
     @list_emails
   end
 end

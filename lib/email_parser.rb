@@ -10,7 +10,7 @@ class EmailParser
   end
 
   def parse
-    @emails.delete(",").split.collect{|email| email.strip}
+    @emails.delete(",").split.uniq
 
   end
 end
